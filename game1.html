@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>俄罗斯方块嘻嘻</title>
+    <link rel="stylesheet" href="game1.css">
+</head>
+<body>
+    <h1>俄罗斯方块嘻嘻</h1>
+    <div class="game-container">
+        <!-- 游戏画布 -->
+        <div class="game-area">
+            <canvas id="tetris" width="300" height="600"></canvas>
+        </div>
+        <!-- 分数和下一个方块 -->
+        <div class="info">
+            <p>得分: <span id="score">0</span></p>
+            <p>最高分: <span id="high-score">0</span></p>
+            <p>下一个方块:</p>
+            <canvas id="next" width="120" height="120"></canvas>
+        </div>
+    </div>
+    <!-- 控制按钮 -->
+    <div class="mobile-controls">
+        <button id="left">←</button>
+        <button id="right">→</button>
+        <button id="down">↓</button>
+        <button id="rotate">↑</button>
+        <button id="drop">快速下落</button>
+        <button id="pause">暂停</button>
+        <button onclick="window.location.href='index.html'">返回主页</button>
+    </div>
+    <script src="game1.js"></script>
+</body>
+</html>
