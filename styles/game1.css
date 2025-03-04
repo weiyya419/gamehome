@@ -1,0 +1,164 @@
+body {  
+    font-family: Arial, sans-serif;  
+    text-align: center;  
+    background-image: url('file:///D:/studyyy/game/image/background/back1.png');  
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat;  
+    background-attachment: fixed;  
+
+    margin: 0;  
+    padding: 0;  
+    overflow: auto;  
+}  
+
+h1 {  
+    margin-top: 20px;  
+    font-size: 24px;  
+    color: #FFFFFF; /* 标题颜色改为白色 */  
+}  
+
+/* 游戏容器 */  
+.game-container {  
+    display: flex;  
+    justify-content: center;  
+    align-items: flex-start;  
+    margin-top: 20px;  
+    gap: 10px;   
+    padding: 0 10px;  
+}  
+
+/* 游戏画布区域 */  
+.game-area {  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;  
+}  
+
+canvas {  
+    border: 2px solid #333;  
+    background-color: #000;  
+    max-width: 100%;   
+    height: auto;   
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),  
+                0 0 30px rgba(255, 255, 255, 0.4),  
+                0 0 40px rgba(255, 255, 255, 0.3),
+                0 0 50px rgba(255, 255, 255, 0.2),
+                0 0 60px rgba(255, 255, 255, 0.1);  
+    /* 增加了透明白光效果 */  
+}  
+
+/* 信息栏 */  
+.info {  
+    display: flex;  
+    flex-direction: column;   
+    gap: 10px;   
+    max-width: 100%;   
+}  
+
+/* 分数区域 */  
+.score-area {  
+    background-color: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */  
+    padding: 10px;  
+    /* 移除边框 */  
+    border-radius: 5px;  
+    text-align: left;  
+    color: #FFFFFF; /* 文字颜色改为白色 */  
+}  
+
+/* 下一个方块区域 */  
+.next-area {  
+    background-color: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */  
+    padding: 10px;  
+    border-radius: 5px;  
+    text-align: left;  
+    color: #FFFFFF; /* 文字颜色改为白色 */  
+}  
+
+#next {  
+    border: 2px solid #333;  
+    background-color: #000;  
+    margin-top: 10px;  
+    max-width: 100%;   
+    height: auto;  
+}  
+
+/* 操作说明区域 */  
+.controls-area {  
+    width: 500px;  
+    margin: 20px auto;  
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */  
+    padding: 10px;  
+    border-radius: 5px;  
+    text-align: left;  
+    color: #333; /* 文字颜色改为白色 */  
+    /* 移除边框 */  
+}  
+
+.controls-area h3 {  
+    margin-top: 0;  
+    font-size: 18px;  
+    color: #333; /* 文字颜色改为白色 */  
+}  
+
+.controls-area p {  
+    margin: 5px 0;  
+    font-size: 14px;  
+    color: #FFFFFF; /* 文字颜色改为白色 */  
+}  
+
+/* 手机控制按钮样式 */  
+.mobile-controls {
+    display: none; /* 默认隐藏，只在手机上显示 */
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%; /* 按钮区域宽度占满屏幕 */
+    position: fixed; /* 固定在底部 */
+    bottom: 0; /* 距离底部为0 */
+    left: 0; /* 距离左侧为0 */
+    background-color: #fff; /* 按钮区域背景色 */
+    border-top: 2px solid #333; /* 顶部边框 */
+}
+
+.mobile-controls button {
+    padding: 10px 15px; /* 减小按钮内边距 */
+    font-size: 16px; /* 减小按钮字体大小 */
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    flex: 1; /* 按钮宽度自适应 */
+}
+
+.mobile-controls button:hover {
+    background-color: #ddd;
+}
+
+/* 在手机上显示控制按钮 */
+@media (max-width: 600px) {
+    .mobile-controls {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .game-container {
+        flex-direction: column; /* 垂直排列游戏区域和信息区域 */
+        align-items: center;
+    }
+
+    .info {
+        width: 90%; /* 信息区域宽度占屏幕宽度的90% */
+    }
+
+    #tetris {
+        width: 90%; /* 游戏画布宽度占屏幕宽度的90% */
+        height: auto;
+    }
+
+    #next {
+        width: 80px; /* 下一个方块画布固定宽度 */
+        height: 80px;
+    }
+}

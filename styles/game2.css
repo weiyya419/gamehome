@@ -1,0 +1,62 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+.controls {
+  margin-bottom: 20px;
+}
+
+#game-board {
+  display: grid;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #f0f0f0;
+}
+
+.cell.revealed {
+  background-color: #d0d0d0;
+}
+
+.cell.mine {
+  background-color: #ff0000;
+}
+
+.cell.flagged::after {
+  content: '🚩';
+}
+
+/* 手机端样式 */
+@media (max-width: 600px) {
+  .cell {
+    width: 20px; /* 减小单元格大小 */
+    height: 20px;
+    font-size: 10px; /* 减小字体大小 */
+  }
+
+  .controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  #flag-mode {
+    background-color: #ffcc00;
+  }
+
+  /* 调整游戏板的列宽 */
+  #game-board {
+    grid-template-columns: repeat(auto-fit, 20px);
+  }
+}
