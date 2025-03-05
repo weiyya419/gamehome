@@ -60,7 +60,7 @@ function renderBoard(rows, cols) {
   gameBoard.innerHTML = '';
 
   // 根据屏幕宽度动态设置单元格大小
-  const cellSize = window.innerWidth <= 600 ? 20 : 30;
+  const cellSize = window.innerWidth <= 600 ? 20 : 30; // 手机端单元格更小
   gameBoard.style.gridTemplateColumns = `repeat(${cols}, ${cellSize}px)`;
 
   for (let row = 0; row < rows; row++) {
@@ -73,6 +73,14 @@ function renderBoard(rows, cols) {
       cell.addEventListener('contextmenu', handleRightClick);
       gameBoard.appendChild(cell);
     }
+  }
+  // 在手机上启用横向滚动
+  if (window.innerWidth <= 600) {
+    gameBoard.style.overflowX = 'auto';
+    gameBoard.style.justifyContent = 'flex-start';
+  } else {
+    gameBoard.style.overflowX = 'hidden';
+    gameBoard.style.justifyContent = 'center';
   }
 }
 

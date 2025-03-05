@@ -57,6 +57,8 @@ body {
 
   /* 调整游戏板的列宽 */
   #game-board {
-    grid-template-columns: repeat(auto-fit, 20px);
+    overflow-x: auto; /* 允许横向滚动 */
+    justify-content: flex-start; /* 左对齐 */
+    padding: 0 5px; /* 添加内边距，避免最左边的格子被遮挡 */
   }
 }

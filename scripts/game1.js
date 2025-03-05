@@ -264,6 +264,7 @@ const dropButton = document.getElementById("drop");
 const pauseButton = document.getElementById("pause");
 
 // 为按钮添加事件监听器
+
 leftButton.addEventListener("click", () => movePiece(-1, 0));
 rightButton.addEventListener("click", () => movePiece(1, 0));
 downButton.addEventListener("click", () => movePiece(0, 1));

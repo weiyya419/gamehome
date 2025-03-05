@@ -8,6 +8,10 @@
 </head>  
 <body>  
     <h1>俄罗斯方块嘻嘻</h1>  
+    <div class="header-buttons">
+        <button id="pause">暂停</button>
+        <button onclick="window.location.href='index.html'">返回主页</button>
+    </div>
     <div class="game-container">  
         <!-- 游戏画布 -->  
         <div class="game-area">  
@@ -24,15 +28,17 @@
     
     <!-- 控制按钮 -->  
     <div class="mobile-controls">  
-        <button id="drop">瞬间下落</button>  
-        <button id="down">加速下落</button>  
-        <button id="pause">暂停</button>  
-        <button id="left">←</button>  
-        <button id="right">→</button>  
-        <button id="rotate">旋转</button>  
-        <button onclick="window.location.href='index.html'">返回主页</button>  
+        <div class="left-buttons">
+            <button id="drop">↑</button>
+            <button id="left">←</button>
+            <button id="down">↓</button>
+            <button id="right">→</button>
+        </div>
+        <div class="right-buttons">
+            <button id="rotate">旋转</button>
+        </div>
     </div>  
     <script src="scripts/game1.js"></script>  
 </body>  
 </script>  
-</html>  
+</html> 
