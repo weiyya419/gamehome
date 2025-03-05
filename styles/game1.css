@@ -15,7 +15,7 @@ body {
 h1 {  
     margin-top: 20px;  
     font-size: 24px;  
-    color: #333; /* 标题颜色改为白色 */  
+    color: #333; /* 标题颜色 */  
 }  
 
 /* 游戏容器 */  
@@ -40,58 +40,50 @@ canvas {
     background-color: #000;  
     max-width: 100%;   
     height: auto;   
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5),  
-                0 0 30px rgba(255, 255, 255, 0.4),  
-                0 0 40px rgba(255, 255, 255, 0.3),
-                0 0 50px rgba(255, 255, 255, 0.2),
-                0 0 60px rgba(255, 255, 255, 0.1);  
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3),  
+                0 0 30px rgba(255, 255, 255, 0.2),  
+                0 0 40px rgba(255, 255, 255, 0.1);  
     /* 增加了透明白光效果 */  
 }  
 
-/* 信息栏 */  
-.info {  
-    display: flex;  
-    flex-direction: column;   
-    gap: 10px;   
-    max-width: 100%;   
-}  
+/* 信息栏 */
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 10px; /* 调整行间距 */
+    max-width: 100%;
+    margin-top: 10px;
+    padding: 10px; /* 增加内边距 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色背景 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* 阴影 */
+}
 
-/* 分数区域 */  
-.score-area {  
-    background-color: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */  
-    padding: 10px;  
-    /* 移除边框 */  
-    border-radius: 5px;  
-    text-align: left;  
-    color: #FFFFFF; /* 文字颜色改为白色 */  
-}  
+/* 分数区域 */
+.info p {
+    margin: 2px 0; /* 缩小段落之间的间距 */
+    font-size: 14px; /* 调整字体大小 */
+    color: #FFFFFF; /* 文字颜色改为白色 */
+}
 
-/* 下一个方块区域 */  
-.next-area {  
-    background-color: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */  
-    padding: 10px;  
-    border-radius: 5px;  
-    text-align: left;  
-    color: #FFFFFF; /* 文字颜色改为白色 */  
-}  
-
-#next {  
-    border: 2px solid #333;  
-    background-color: #000;  
-    margin-top: 10px;  
-    max-width: 100%;   
-    height: auto;  
-}  
-
+/* 下一个方块区域 */
+#next {
+    border: 2px solid #333;
+    background-color: #000;
+    margin-top: 1px; /* 缩小与上方文字的距离 */
+    max-width: 100%;
+    height: auto;
+}
 /* 操作说明区域 */  
 .controls-area {  
     width: 500px;  
     margin: 20px auto;  
-    background-color: rgba(255, 255, 255, 0.8); /* 半透明白色背景 */  
+    background-color: rgba(255, 255, 255, 0.1); /* 半透明白色背景 */  
     padding: 10px;  
     border-radius: 5px;  
     text-align: left;  
-    color: #333; /* 文字颜色改为白色 */  
+    color: #FFFFFF; /* 文字颜色改为白色 */  
     /* 移除边框 */  
 }  
 
@@ -122,7 +114,7 @@ canvas {
     left: 25; /* 距离左侧为0 */
     background-color: rgba(255, 255, 255, 0); /* 半透明背景 */
     border-top: 0px solid #333; /* 顶部边框 */
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* 添加阴影 */
+    /* box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); 添加阴影 */
 }
 
 .mobile-controls .left-buttons {
@@ -181,7 +173,7 @@ canvas {
 
 /* 暂停和返回主页按钮样式 */
 .header-buttons {
-    display: none; /* 默认隐藏，只在手机上显示 */
+    display: flex; /* 默认隐藏，只在手机上显示 */
     justify-content: center;
     gap: 10px;
     margin-top: 10px;
@@ -192,7 +184,7 @@ canvas {
     font-size: 14px;
     border: none;
     border-radius: 5px;
-    background-color: #f44336; /* 红色背景 */
+    background-color: #4169E1; /* 红色背景 */
     color: white;
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
