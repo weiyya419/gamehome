@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif; /* 设置字体类型 */  
   margin: 0; /* 移除默认的 body 外边距 */  
   padding: 0; /* 移除默认的 body 内边距 */  
-  background-image: url("image/background/agqb2-xumyx.png"); /* 设置背景图片路径 */  
+  background-image: url("../image/background/agqb2-xumyx.png"); /* 设置背景图片路径 */  
   background-size: cover; /* 确保背景图片覆盖整个容器 */  
   background-position: center; /* 居中显示背景图片 */  
   background-attachment: fixed; /* 固定背景图片，防止随内容滚动 */  
