@@ -10,9 +10,14 @@ body {
     margin: 0;  
     padding: 0;  
     overflow: auto;  
+    display: flex;                /* 开启Flex布局 */  
+    justify-content: center;     /* 水平居中 */  
+    align-items: center;         /* 垂直居中 */  
+    min-height: 100vh;  
+    
 } 
 .container {
-    text-align: center;
+
     background-color: rgba(255, 255, 255, 0.7);
     padding: 20px;
     border-radius: 10px;
